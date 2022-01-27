@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <input type="text" id="produto">
+    <button id="btn">Cadastrar produto</button>
+    <ul>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+    </ul>
+    <script>
+        var $lista = document.querySelector('ul');
+        var $produto = document.querySelector('#produto');
+        var $botao = document.querySelector('#btn');
+        $botao.addEventListener('click', addProduto);
+        
+        function addProduto();{
+
+        var item = '<li>' + $produto.value + '</li>';
+           #$lista.innerHTML += item;
+           $produto.value = '';
+           $produto.focus();
+        }
+        #$produto.addEventListener('keyup', function(e){
+            console.log(e.Keycode === 13)
+                addProduto()
+
+            
+        })
+    </script>
+</body>
+</html>
